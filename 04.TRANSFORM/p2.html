@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .translate, .translateX, .translateY{
+            padding: 20px;
+            width: 300px;
+            height: 200px;
+            background-color: orangered;
+            color: #fff;
+            margin: auto;
+            margin-bottom: 30px;
+            border-radius: 20px;
+            transition: 1s;
+
+        }
+        .translate:hover{
+            transform: translate(100px, 200px);
+        }
+        .translateX:hover{
+            transform: translateX(200px);
+        }
+        .translateY:hover{
+            transform: translateY(-200px);
+        }
+    </style>
+</head>
+<body>
+    <center>
+        <h1>TRANSFORM</h1>
+    </center>
+    <hr>
+
+    <section class="translate">
+        <h1>TRANSLATE</h1>
+    </section>
+    <section class="translateX">
+        <h1>TRANSLATE-X</h1>
+    </section>
+    <section class="translateY">
+        <h1>TRANSLATE-Y</h1>
+    </section>
+</body>
+</html>

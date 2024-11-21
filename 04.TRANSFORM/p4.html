@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+         *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        .container{
+            min-height: 70vh;
+            background-color: rgb(3, 49, 48);
+        }
+        .form{
+            width: 80%;
+            min-height: 100px;
+            background-color: #ffffff;
+            margin: auto;
+            transform: translateY(-50px);
+            box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+            display: flex;
+            align-items: center;
+            padding: 20px;
+            gap: 20px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            flex-wrap: wrap;
+        }
+        .form div{
+            flex: 1;
+            min-width: 150px;
+        }
+        .form div input{
+            width: 100%;
+            padding: 10px;
+            border: none;
+            outline: none;
+            border: 1px solid #ccc;
+            margin-top: 3px;
+        }
+        button{
+            margin-top: 20px;
+            min-width: 150px;
+            padding: 10px;
+            border: none;
+            color: #fff;
+            background-color: rgb(3, 49, 48);
+            width: 100%;
+        }
+        .form label{
+            color: rgb(3, 49, 48);
+        }
+    </style>
+</head>
+<body>
+    <section class="container">
+
+    </section>
+    <div class="form">
+        <div>
+            <label for="">Username</label>
+            <input type="text" placeholder="Enter your fullname">
+        </div>
+
+        <div>
+            <label for="">Email address</label>
+            <input type="text"  placeholder="example@gmail.com">
+        </div>
+
+        <div>
+            <label for="">Phone number</label>
+            <input type="text" placeholder="+91 000-0000-000">
+        </div>
+        <div>
+            <label for=""></label>
+            <button>submit</button>
+        </div>
+    </div>
+</body>
+</html>

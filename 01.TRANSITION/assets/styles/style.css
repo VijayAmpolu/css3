@@ -1,0 +1,102 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box
+}
+/*p2.html example*/
+.container1{
+    padding: 4%;
+    display: flex;
+    gap: 30px;
+    align-items: center;
+    justify-content: center;
+}
+.container1 button{
+    border: none;
+    padding: 10px 20px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    border: 2px solid transparent;
+    cursor: pointer;
+}
+.container1 .btn1{
+    border: 2px solid red;
+    background-color: transparent;
+    color: red;
+    border-radius: 5px;
+    transition: 2000ms;
+}
+.container1 .btn1:hover{
+    background-color: red;
+    color: #fff;
+    padding: 30px;
+}
+.container1 .btn2{
+    border: 2px solid blue;
+    background-color: transparent;
+    color: blue;
+    border-radius: 5px;
+    transition: padding 3s;
+}
+.container1 .btn2:hover{
+    background-color: blue;
+    color: #fff;
+    padding: 30px;
+}
+.container1 .btn3{
+    border: 2px solid green;
+    background-color: transparent;
+    color: green;
+    border-radius: 5px;
+    transition: color 3s;
+}
+.container1 .btn3:hover{
+    background-color: green;
+    color: #fff;
+    padding: 30px;
+}
+/*p3.html*/
+.container2{
+    padding: 4%;
+}
+.container2 div{
+    width: 400px;
+    height: 100px;
+    margin: 20px;
+    background-color: darkgoldenrod;
+    font-weight: 700;
+    font-size: 1.4rem;
+    padding: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.container2 .d1{
+    transition: width 2s;
+    transition-timing-function: linear;
+}
+.container2 .d2{
+    transition: width 2s;
+    transition-timing-function: ease-in;
+}
+.container2 .d3{
+    transition: width 2s;
+    transition-timing-function: ease-out;
+}
+.container2 .d4{
+    transition: width 2s;
+    transition-timing-function: ease;
+}
+.container2 .d5{
+    transition: width 2s;
+    transition-timing-function: ease-in-out;
+}
+.container2 .d6{
+    transition: width 2s;
+    transition-timing-function: steps(10,jump-start);/*jump-start.jump-end,start,end,jump-both,jump-none*/
+}
+.container2 .d7{
+    transition: width 2s;
+    transition-timing-function: cubic-bezier(0.23, 1, 0.320, 1);
+}
+.container2 div:hover{
+    width: 100px;
+}

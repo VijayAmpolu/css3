@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+       .container{
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+       }
+       .tooltip{
+        padding: 20px;
+        position: relative;
+        cursor: pointer;
+
+       }
+       .tooltip button{
+        border: none;
+        background-color: transparent;
+        font-size: 2rem;
+        text-align: center;
+       }
+       .tooltip-content{
+        background-color: blue;
+        padding: 5px 10px;
+        color: #fff;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        border-radius: 5px;
+        position: absolute;
+        width: 150px;
+        text-align: center;
+        top: -30px;
+        left: 50%;
+        transform: translateX(-50%);
+        display: none;
+       }
+       .tooltip-content::before{
+        content: '';
+        position: absolute;
+        width: 0px;
+        border: 15px;
+        border-color: blue transparent transparent transparent;
+        border-style: solid;
+        bottom: -29px;
+        left: 50%;
+        transform: translateX(-50%);
+       }
+       .tooltip:hover .tooltip-content{
+        display: block;
+       }
+       .tooltip:hover button{
+        color: blue;
+        cursor: pointer;
+       }
+    </style>
+</head>
+<body>
+    
+
+
+
+    <div class="container">
+        <div class="tooltip">
+            <button><i class="fa-solid fa-user"></i></button>
+            <div class="tooltip-content">
+                check your profile
+            </div>
+        </div>
+    </div>
+</body>
+</html>

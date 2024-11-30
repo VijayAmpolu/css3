@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .container{
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: radial-gradient(#262432, #16141f);
+        }
+        .circle{
+            min-width: 350px;
+            min-height: 350px;
+            border-radius: 50%;
+            border: 20px solid #f9dbdb;
+            position: relative;
+            overflow: hidden;
+            background: radial-gradient(#8faac0, #45596f);
+        }
+        .circle::before{
+            content: '';
+            position: absolute;
+            width: 80%;
+            height: 80%;
+            border: 15px;
+            border-color: transparent rgba(162, 162, 241, 0.463) transparent transparent;
+            border-style: solid;
+            left: 50%;
+            top: 50%;
+            transform: translateX(-50%) translateY(-50%);
+            border-radius: 100%;
+        }
+        .circle::after{
+            content: '';
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background-color: rgba(162, 162, 241, 0.463);
+            border-radius: 100px;
+            right: 63px;
+            top: 40px;
+        }
+        .green{
+            width: 150px;
+            height: 100px;
+            background: radial-gradient(rgb(101, 166, 82), rgb(58, 78, 46));
+            border-radius: 100%;
+            position: absolute;
+            bottom: -60px;
+            left: 10px;
+            z-index: 5;
+        }
+        .green::before{
+            content: '';
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            background: radial-gradient(rgb(101, 166, 82), rgb(58, 78, 46));
+            right: -150px;
+            bottom: -10px;
+            border-radius: 100%;
+            z-index: 2;
+        }
+        .green::after{
+            content: '';
+            position: absolute;
+            width: 40%;
+            height: 100%;
+            background: radial-gradient(rgb(101, 166, 82), rgb(58, 78, 46));
+            left: 130px;
+            border-radius: 100px;
+            z-index: -2;
+        }
+        .cloud1{
+            width: 60px;
+            height: 30px;
+            background: linear-gradient(#fff, #ccdafa);
+            border-radius: 100px;
+            position: relative;
+            animation: cloudAnimation 5s linear infinite;
+            z-index: 3;
+        }
+        .cloud1::before{
+            content: '';
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background-color: #ffffff;
+            border-radius: 100px;
+            top: -8px;
+            left: 5px;
+        }
+        .cloud1::after{
+            content: '';
+            position: absolute;
+            width: 30px;
+            height: 30px;
+            background-color: #ffffff;
+            border-radius: 100px;
+            top: -12px;
+            left: 20px;
+        }
+
+        .cloud2{
+            width: 40px;
+            height: 20px;
+            background: linear-gradient(#fff, #ccdafa);
+            border-radius: 100px;
+            position: relative;
+            animation: cloudAnimation 5s linear infinite;
+            animation-delay: 1s;
+            z-index: 3;
+        }
+        .cloud2::before{
+            content: '';
+            position: absolute;
+            width: 15px;
+            height: 15px;
+            background-color: #ffffff;
+            border-radius: 100px;
+            top: -4px;
+            left: 2px;
+        }
+        .cloud2::after{
+            content: '';
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background-color: #ffffff;
+            border-radius: 100px;
+            top: -10px;
+            left: 15px;
+        }
+
+        @keyframes cloudAnimation{
+            from{
+                transform: translateX(-300px) translateY(100px);
+            }   
+            to{
+                transform: translateX(300px);
+            }
+        }
+
+        .thread{
+            position: absolute;
+            width: 100%;
+            height: 70%;
+            border: 3px solid #0c0c0c;
+            border-radius: 100%;
+            top: 10px;
+            transform: scale(1.14);
+        
+        }
+        .bird{
+            width: 150px;
+            height: 170px;
+            border-radius: 100%;
+            background: radial-gradient(#10d8c9, #0ec2b4);
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translateX(-50%) translateY(-55%);
+            z-index: 10;
+        }
+        .bird::before{
+            content: '';
+            width: 25px;
+            height: 20px;
+            position: absolute;
+            background-color: #ebb749;
+            border-radius: 100px;
+            bottom: -5px;
+            left: 25px;
+        }
+
+        .bird::after{
+            content: '';
+            width: 25px;
+            height: 20px;
+            position: absolute;
+            background-color: #ebb749;
+            border-radius: 100px;
+            bottom: -5px;
+            right: 25px;
+        }
+        .eye1{
+            width: 45px;
+            height: 50px;
+            background: radial-gradient(#10d8c9, #02a396);
+            border-radius: 100%;
+            transform: rotate(-5deg);
+            position: absolute;
+            top: 30px;
+            left: 20px;
+            overflow: hidden;
+        }
+        .eye1::before{
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-color: #fff;
+            border-radius: 100%;
+            transform: rotate(56deg);
+            animation: eyeAnimation 3s ease-in-out infinite alternate;
+        }
+        .eye1::after{
+            content: '';
+            width: 15px;
+            height: 15px;
+            position: absolute;
+            border-radius: 100px;
+            background-color: #0c0c0c;
+            left: 50%;
+            transform: translateX(-50%);
+            bottom: 4px;
+        }
+        .eye2{
+            width: 45px;
+            height: 50px;
+            background: radial-gradient(#10d8c9, #02a396);
+            border-radius: 100%;
+            transform: rotate(-5deg);
+            position: absolute;
+            top: 30px;
+            right: 20px;
+            overflow: hidden;
+        }
+        .eye2::before{
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-color: #fff;
+            border-radius: 100%;
+            transform: rotate(-56deg);
+            animation: eyeAnimation 3s ease-in-out infinite alternate;
+        }
+        .eye2::after{
+            content: '';
+            width: 15px;
+            height: 15px;
+            position: absolute;
+            border-radius: 100px;
+            background-color: #0c0c0c;
+            left: 50%;
+            transform: translateX(-50%);
+            bottom: 4px;
+            
+        }
+        @keyframes eyeAnimation{
+            0%{
+                transform: translateY(10px) rotate(56deg);
+            }
+           
+            100%{
+                transform: translateY(50%) rotate(56deg);
+            }
+        }
+        .layer1{
+            width: 35px;
+            height: 50px;
+            background-color: #eb9f2d;
+            border-radius: 100px;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            bottom: 40px;
+            box-shadow: 0px 10px 0px #5ea39b;
+        }
+        .layer1::before{
+            content: '';
+            width: 40px;
+            height: 40px;
+            position: absolute;
+            background-color: #f7d35d;
+            border-radius: 100px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        .layer1::after{
+            content: '';
+            position: absolute;
+            width: 15px;
+            height: 9px;
+            border-radius: 100%;
+            background-color: #ffffffba;
+            left: 50%;
+            transform: translateX(-50%);
+            top: 8px;
+        }
+        .wing{
+            width: 20px;
+            height: 100px;
+            background: radial-gradient(#10d8c9, #095750);
+            border-radius: 100px;
+            position: absolute;
+            left: 80px;
+            bottom: 50%;
+            transform: translateY(50%) rotate(10deg);
+
+        }
+        .wing1{
+            width: 20px;
+            height: 100px;
+            background: radial-gradient(#10d8c9, #095750);
+            border-radius: 100px;
+            position: absolute;
+            right: 80px;
+            bottom: 50%;
+            transform: translateY(50%) rotate(-10deg);
+
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="circle">
+            <div class="cloud1"></div>
+            <div class="cloud2"></div>
+            <div class="bird">
+                <div class="eye1"></div>
+                <div class="eye2"></div>
+
+                <div class="layer1"></div>
+            </div>
+            <div class="wing"></div>
+            <div class="wing1"></div>
+            
+            <div class="thread"></div>
+            <div class="green"></div>
+        </div>
+    </div>
+</body>
+</html>
